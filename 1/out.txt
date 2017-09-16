@@ -1,0 +1,118 @@
+Initialize started file_name: input.txt
+file opened
+now line : 
+now line : [COMMON]
+new Section
+Section name : COMMON
+now line : StatisterTimeMs=5000
+Section::add started
+name: StatisterTimeMs
+value: 5000
+Section::add finished
+
+now line : LogNCMD=1
+Section::add started
+name: LogNCMD
+value: 1
+Section::add finished
+
+now line : LogXML=0
+Section::add started
+name: LogXML
+value: 0
+Section::add finished
+
+now line : DiskCachePath=/sata/panorama
+Section::add started
+name: DiskCachePath
+value: /sata/panorama
+Section::add finished
+
+now line : OpenMPThreadsCount=2
+Section::add started
+name: OpenMPThreadsCount
+value: 2
+Section::add finished
+
+now line : [ADC_DEV]
+new Section
+Section name : ADC_DEV
+now line : BufferLenSeconds=0.65
+Section::add started
+name: BufferLenSeconds
+value: 0.65
+Section::add finished
+
+now line : SampleRate=120000000.0
+Section::add started
+name: SampleRate
+value: 120000000.0
+Section::add finished
+
+now line : Driver=libusb
+Section::add started
+name: Driver
+value: libusb
+Section::add finished
+
+now line : [NCMD]
+new Section
+Section name : NCMD
+now line : EnableChannelControl=1
+Section::add started
+name: EnableChannelControl
+value: 1
+Section::add finished
+
+now line : SampleRate=900000.0
+Section::add started
+name: SampleRate
+value: 900000.0
+Section::add finished
+
+now line : TidPacketVersionForTidControlCommand=2
+Section::add started
+name: TidPacketVersionForTidControlCommand
+value: 2
+Section::add finished
+
+now line : 
+now line : 
+now line : 
+now line : 
+now line : [LEGACY_XML]
+new Section
+Section name : LEGACY_XML
+now line : ListenTcpPort=1976
+Section::add started
+name: ListenTcpPort
+value: 1976
+Section::add finished
+
+now line : [DEBUG]
+new Section
+Section name : DEBUG
+now line : PlentySockMaxQSize=126
+Section::add started
+name: PlentySockMaxQSize
+value: 126
+Section::add finished
+
+now line : DBAddressIP=127.0.0.1
+Section::add started
+name: DBAddressIP
+value: 127.0.0.1
+Section::add finished
+
+Initialize finished file_name: input.txt
+
+Section::exists
+
+Section::exists
+
+Section::get
+name: BufferLenSeconds
+
+Section::get
+name: DiskCachePath
+
