@@ -1,0 +1,8 @@
+In file included from StatisticMultiset.h:45:0,
+                 from main.cpp:1:
+StatisticMultiset.cpp:27:6: error: prototype for 'void StatisticMultiset<T>::AddNum(std::vector<T>&)' does not match any in class 'StatisticMultiset<T>'
+ void StatisticMultiset<T>::AddNum(std::vector<T> &numbers) {
+      ^
+StatisticMultiset.cpp:12:6: error: candidate is: void StatisticMultiset<T>::AddNum(const T&)
+ void StatisticMultiset<T>::AddNum(T const &num) {
+      ^
