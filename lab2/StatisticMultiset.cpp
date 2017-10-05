@@ -19,33 +19,42 @@ void StatisticMultiset<T>::AddNum(T const &num) {
 
 
 template <typename T>
-void StatisticMultiset<T>::AddNum(std::multiset<T> &numbers) {
+void StatisticMultiset<T>::AddNum(std::multiset<T> const &numbers) {
 	for (auto &i : numbers) {
 		data.insert(i);
+		sum += i;
 	}
 }
 	
 
 template <typename T>
-void StatisticMultiset<T>::AddNum(std::vector<T> &numbers) {
+void StatisticMultiset<T>::AddNum(std::vector<T> const &numbers) {
 	for (auto &i : numbers) {
 		data.insert(i);
+		sum += i;
 	}
 }
 
 
 template <typename T>
-void StatisticMultiset<T>::AddNum(std::list<T> &numbers) {
+void StatisticMultiset<T>::AddNum(std::list<T> const &numbers) {
 	for (auto &i : numbers) {
 		data.insert(i);
+		sum += i;
 	}
 }
 
 template <typename T>
 void StatisticMultiset<T>::AddNum(StatisticMultiset<T> const &numbers) {
-	for (auto &i : numbers.data) {
-		data.insert(i);
-	}
+	if (this != &numbers) {
+		AddNum(numbers.data);
+	} else {
+		for (auto i = numbers.data.begin(); i != numbers.data.end(); i++) {
+			data.insert(*i);
+			sum += *i;
+			i++; // 
+		}
+	}	
 }
 
 template <typename T>
@@ -54,8 +63,10 @@ void StatisticMultiset<T>::AddNumsFromFile(char const * const filename) {
 	if (!in.good())
 		std::cerr << "File IO error while opening\n";
 	T now;
-	while(in >> now) 
+	while(in >> now) { 
 		AddNum(now);
+		sum += now;
+	}	
 }	
 	
 
@@ -77,6 +88,8 @@ size_t StatisticMultiset<T>::GetSize() const {
 	
 template <typename T>
 float StatisticMultiset<T>::GetAvg() const {
+	if (GetSize() == 0) 
+		std::cerr << "No elements is StatisticMultiset\n";
 	return (float)sum / GetSize();
 }	
 

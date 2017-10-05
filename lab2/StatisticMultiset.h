@@ -12,9 +12,9 @@ struct StatisticMultiset {
 
 	//add number to set
 	void AddNum(T const &num);
-	void AddNum(std::multiset<T> &numbers);
-	void AddNum(std::vector<T> &numbers);
-	void AddNum(std::list<T> &numbers);
+	void AddNum(std::multiset<T> const &numbers);
+	void AddNum(std::vector<T> const &numbers);
+	void AddNum(std::list<T> const &numbers);
 	void AddNum(StatisticMultiset<T> const &numbers);
 	void AddNumsFromFile(char const * const filename);
 	

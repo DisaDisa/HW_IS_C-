@@ -8,7 +8,9 @@ int main() {
 	StatisticMultiset<int> s;	
 	s.AddNum(5);
 	s.AddNum(10);
-	std::vector<int> v = {1, 2, 3};
+	s.AddNum(s);
+	std::cout << s.GetSize() << '\n';	
+	/*std::vector<int> v = {1, 2, 3};
 	std::multiset<int> ss = {7, 15};
 	std::list<int> l = {10, 20};
 	s.AddNum(v);
@@ -19,6 +21,7 @@ int main() {
 	s2.AddNum(v2);
 	s.AddNum(s2);
 	s.AddNumsFromFile("input.txt");
+	s.AddNum(s);
 	std::cout << "min " << s.GetMin() << '\n';
 	std::cout << "max " << s.GetMax() << '\n';
 	std::cout << "avg " << s.GetAvg() << '\n';
@@ -26,4 +29,5 @@ int main() {
 	std::cout << "larger 7.5 " << s.GetCountAbove(7.5) << '\n';
 	std::cout << "less 10 " << s.GetCountUnder(10) << '\n';
 	std::cout << "larger 10 " << s.GetCountAbove(10) << '\n';
+	*/
 }	
