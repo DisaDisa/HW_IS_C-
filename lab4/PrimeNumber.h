@@ -12,10 +12,6 @@ struct PrimeNumber {
     //generate array neerest_prime
     PrimeNumber();
 
-    PrimeNumber(PrimeNumber const &) = delete;
-
-    PrimeNumber & operator=(PrimeNumber const &) = delete;
-
     //returns vector <int> with primes
     std::vector <int> factorization(int const) const;
 
