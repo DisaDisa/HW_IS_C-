@@ -12,12 +12,17 @@ struct PrimeNumber {
     //generate array neerest_prime
     PrimeNumber();
 
-    //returns vector <int> * with primes
+    PrimeNumber(PrimeNumber const &) = delete;
+
+    PrimeNumber & operator=(PrimeNumber const &) = delete;
+
+    //returns vector <int> with primes
     std::vector <int> factorization(int const) const;
 
     //factorization of numbers in file
     void file_factorization(char const * const filename_in, char const * const filename_out) const;
 
+    //check that int argument is prime
     bool is_prime(int const) const;
 
 

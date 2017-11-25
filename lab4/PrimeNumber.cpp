@@ -4,10 +4,13 @@
 
 #include <iostream>
 #include <fstream>
+#include <vector>
 #include "PrimeNumber.h"
 
 
-PrimeNumber::PrimeNumber() : min_prime(size_ + 1, 0) {
+
+PrimeNumber::PrimeNumber() {
+    min_prime.resize(size_ + 1, 0);
     for (int i = 2; i <= (int)size_; i++) {
         if (min_prime[i] == 0) {
             min_prime[i] = i;
