@@ -28,7 +28,7 @@ struct PrimeNumber {
 
 private:
     static size_t const size_ = (int)1e7;
-    std::vector <int> min_prime;
-    std::vector <int> primes;
+    static std::vector <int> min_prime;
+    static std::vector <int> primes;
 };
 

@@ -8,6 +8,9 @@
 #include "PrimeNumber.h"
 
 
+std::vectorgint> PrimeNumber::min_prime;
+std::vector<int> PrimeNumber::primes;
+
 
 PrimeNumber::PrimeNumber() {
     min_prime.resize(size_ + 1, 0);
