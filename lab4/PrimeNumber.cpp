@@ -19,8 +19,7 @@ PrimeNumber::PrimeNumber() {
             min_prime[i] = i;
             primes.push_back(i);
         }
-        for (size_t j = 0; j < primes.size() && primes[j] <= min_prime[i]
-                           && i * primes[j] <= (int)size_; j++)
+        for (size_t j = 0; j < primes.size() && primes[j] <= min_prime[i] && i * primes[j] <= (int)size_; j++)
             min_prime[i * primes[j]] = primes[j];
     }
 }
