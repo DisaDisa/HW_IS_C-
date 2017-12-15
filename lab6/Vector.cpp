@@ -110,7 +110,6 @@ void Vector<T>::push_back(T const &val) {
 template <typename T>
 void Vector<T>::push_back(T && val) {
 	if (size == capacity) reserve(2 * capacity);
-	fun(val);
 	data_[size++] = std::move(val);
 }
 
@@ -123,6 +122,9 @@ void Vector<T>::swap(Vector &v) {
 
 template <typename T>
 Vector<T>::Vector(Vector && v) {
+	data_ = nullptr;
+	size = 0;
+	capacity = 0;
 	swap(v);
 }
 

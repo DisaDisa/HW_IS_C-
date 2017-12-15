@@ -8,7 +8,7 @@
 #include "PrimeNumber.h"
 
 
-std::vectorgint> PrimeNumber::min_prime;
+std::vector<int> PrimeNumber::min_prime;
 std::vector<int> PrimeNumber::primes;
 
 
