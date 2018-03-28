@@ -6,7 +6,7 @@ template <typename T>
 Vector<T>::Vector() : size(0), capacity(0), data_(nullptr) {}
 
 template <typename T>
-Vector<T>::Vector(size_t sz) : size(sz), capacity(sz), data_(nullptr){}
+Vector<T>::Vector(size_t sz) : size(sz), capacity(sz), data_(new T[sz]){}
 
 template <typename T>
 Vector<T>::Vector(size_t sz, T const &a) : size(sz), capacity(sz), data_(new T[sz]) {
